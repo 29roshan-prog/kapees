@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapees - Interior Design Excellence</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.5/+esm"></script>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>KAPEES</h2>
+                <!-- Updated branding -->
+<style>
+    .logo h2::after {
+        content: " Interiors";
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-left: 5px;
+        color: #7f8c8d;
+    }
+</style>
+
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>✨ Award Winning Design Studio</span>
+            </div>
+            <h1 class="hero-title">
+                Transform Your 
+                <span class="gradient-text">Space</span>
+            </h1>
+            <p class="hero-subtitle">Creating beautiful, functional interiors that reflect your unique style with cutting-edge design solutions</p>
+            <div class="hero-buttons">
+                <button class="cta-button primary">Explore Our Work</button>
+                <button class="cta-button secondary">
+                    <i class="fas fa-play"></i>
+                    Watch Portfolio
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Years</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Satisfaction</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+
+     <section id="gallery" class="gallery">
+    <div class="container">
+      <h2 class="section-title">Our Portfolio</h2>
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="living">Living Room</button>
+        <button class="filter-btn" data-filter="bedroom">Bedroom</button>
+        <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+        <button class="filter-btn" data-filter="office">Office</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <p style="text-align: center; color: #666;">Loading gallery...</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Kapees</h2>
+                    <p class="about-description">
+                        With over a decade of experience in interior design, Kapees has been transforming spaces 
+                        and creating dream environments for our clients. Our team of talented designers combines 
+                        creativity with functionality to deliver exceptional results.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>500+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Awards Won</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>10+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Interior Design Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">What We Do</span>
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive design solutions for every space and style</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-number">01</div>
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Residential Design</h3>
+                    <p>Complete home makeovers and room-specific designs tailored to your lifestyle and personal preferences.</p>
+                    <div class="service-features">
+                        <span>✓ Space Planning</span>
+                        <span>✓ 3D Visualization</span>
+                        <span>✓ Custom Solutions</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Commercial Spaces</h3>
+                    <p>Professional office designs that enhance productivity and strengthen your brand image.</p>
+                    <div class="service-features">
+                        <span>✓ Brand Integration</span>
+                        <span>✓ Ergonomic Design</span>
+                        <span>✓ Flexible Layouts</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Color Consultation</h3>
+                    <p>Expert color schemes that create the perfect ambiance and mood for any space.</p>
+                    <div class="service-features">
+                        <span>✓ Psychology-based</span>
+                        <span>✓ Trend Analysis</span>
+                        <span>✓ Custom Palettes</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">04</div>
+                    <div class="service-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <h3>Furniture Selection</h3>
+                    <p>Curated furniture pieces that perfectly complement your design vision and budget.</p>
+                    <div class="service-features">
+                        <span>✓ Quality Sourcing</span>
+                        <span>✓ Budget Optimization</span>
+                        <span>✓ Installation Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Design Street, Creative City, CC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@kapees.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KAPEES</h3>
+                    <p>Transforming spaces, creating dreams</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kapees Interior Design. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
