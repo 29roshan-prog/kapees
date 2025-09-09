@@ -73,13 +73,13 @@ hamburger.addEventListener("click", () => {
   lightbox.onclick = (e) => { if (e.target === lightbox) closeLightbox(); };
 });
 
+
   // ================= Lightbox Setup =================
-  const lightbox = document.createElement("div");
-  lightbox.className = "lightbox-overlay";
-  document.body.appendChild(lightbox);
+  // Use the existing lightbox from index.html
+  const lightbox = document.getElementById("lightbox");
 
   function openLightbox(url, isVideo) {
-    lightbox.innerHTML = `<span id="lightbox-close">&times;</span>` +
+    lightbox.innerHTML = `<span class="close-btn" id="lightbox-close">&times;</span>` +
                          (isVideo ? `<video src="${url}" controls autoplay></video>` 
                                   : `<img src="${url}" alt="Preview Image">`);
     lightbox.classList.add('active');
@@ -111,13 +111,15 @@ hamburger.addEventListener("click", () => {
       media.style.transform = `scale(${scale}) translate(${currentX}px, ${currentY}px)`;
     };
 
-    document.getElementById('lightbox-close').onclick = closeLightbox;
+    // Always attach close event after showing lightbox
+    const closeBtn = document.getElementById('lightbox-close');
+    if (closeBtn) closeBtn.onclick = closeLightbox;
     lightbox.onclick = (e) => { if (e.target === lightbox) closeLightbox(); };
   }
 
   function closeLightbox() {
     lightbox.classList.remove('active');
-    lightbox.innerHTML = '';
+    lightbox.innerHTML = '<span class="close-btn" id="lightbox-close">&times;</span>';
   }
 
   // ================= Helpers =================
@@ -315,12 +317,32 @@ hamburger.addEventListener("click", () => {
 
   fetchImages();
 });
+s
+// Navigation hamburger toggle for mobile
 document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-
-    hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  // Toggle menu on click
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+  });
+  // Toggle menu on Enter/Space
+  hamburger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      navMenu.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+    }
+  });
+  // Close menu when clicking a link (mobile UX)
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        navMenu.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
     });
+  });
 });
 s
